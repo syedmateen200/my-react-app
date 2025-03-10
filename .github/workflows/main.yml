@@ -17,9 +17,9 @@ jobs:
         run: npm install
       - name: Run Line
         run: npm run lint
-        continue-on-error: false
+        # continue-on-error: false
       - name: Run Test
         run: npm run test
-        continue-on-error: false
+        # continue-on-error: false
       - name: Run Build
         run: npm run build
