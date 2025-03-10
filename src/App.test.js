@@ -43,16 +43,16 @@ describe("App Component", () => {
   });
 
   // Test 5: Failure test case (the message is intentionally wrong to fail)
-  // test("fails to show the incorrect personalized message", () => {
-  //   render(<App />);
+  test("fails to show the incorrect personalized message", () => {
+    render(<App />);
 
-  //   const inputElement = screen.getByPlaceholderText(/enter your name/i);
-  //   fireEvent.change(inputElement, { target: { value: "Bob" } });
+    const inputElement = screen.getByPlaceholderText(/enter your name/i);
+    fireEvent.change(inputElement, { target: { value: "Bob" } });
 
-  //   // This is intentionally incorrect. The correct message should be "Hello, Bob! Welcome to the app!"
-  //   const incorrectMessage = screen.getByText(
-  //     /hello, bob! welcome to the website!/i
-  //   ); // Fail because of "website" instead of "app"
-  //   expect(incorrectMessage).toBeInTheDocument(); // This will fail
-  // });
+    // This is intentionally incorrect. The correct message should be "Hello, Bob! Welcome to the app!"
+    const incorrectMessage = screen.getByText(
+      /hello, bob! welcome to the website!/i
+    ); // Fail because of "website" instead of "app"
+    expect(incorrectMessage).toBeInTheDocument(); // This will fail
+  });
 });

@@ -9,15 +9,23 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1>Welcome User!</h1>
-      <input
-        type="text"
-        placeholder="Enter your name"
-        value={name}
-        onChange={handleChange}
-      />
-      {name && <p>Hello, {name}! Welcome to the app!</p>}
+    <div className="app-container">
+      <div className="welcome-card">
+        <h1>Welcome to the App!</h1>
+        <input
+          type="text"
+          placeholder="Enter your name"
+          value={name}
+          onChange={handleChange}
+          className="name-input"
+        />
+        {name && (
+          <p className="personalized-message">
+            Hello, <span className="user-name">{name}</span>! Welcome to the
+            app!
+          </p>
+        )}
+      </div>
     </div>
   );
 }
