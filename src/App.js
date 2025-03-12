@@ -9,6 +9,7 @@ function App() {
   };
 
   return (
+    // Thiis display the content on main
     <div className="app-container">
       <div className="welcome-card">
         <h1>Welcome to the App!</h1>
