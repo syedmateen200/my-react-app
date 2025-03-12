@@ -10,6 +10,7 @@ function App() {
 
   return (
     // Thiis display the content on main
+    // This for Pull request
     <div className="app-container">
       <div className="welcome-card">
         <h1>Welcome to the App!</h1>
